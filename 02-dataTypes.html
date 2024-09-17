@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    color: rgb(57, 53, 46);
+    text-transform: capitalize;
+}
+
+</style>
+</head>
+<body>
+    <h1>data-type</h1>
+    <!-- i'm use internal script because of code lines  is less  -->
+    <script>
+// primitive non primitive data type
+
+let data={
+'string':'This is a string',
+'boolean':false,
+'boolean':true,
+"number":783,
+ "undefined":undefined,
+ 
+}
+
+
+document.write(data['boolean']);
+console.log(data['boolean']);
+
+for( let t in data){
+    document.write(`<br>${t}`);
+
+}
+
+    </script>
+</body> 
+</html>
