@@ -6,21 +6,37 @@
     <title>Document</title>
     <style>
 h1{
+    padding: 10px;
+    width: 50%;
+    margin: 2rem auto;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2rem;
     letter-spacing: 5px;
     color: rgb(57, 53, 46);
     text-transform: capitalize;
-}
+    border-bottom: 2px solid;
 
+}
+h2{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    color: rgb(130, 123, 111);
+    text-transform: capitalize;
+    font-weight: 300;
+}
 </style>
 </head>
 <body>
     <h1>data-type</h1>
+    <p></p>
+
     <!-- i'm use internal script because of code lines  is less  -->
     <script>
 // primitive non primitive data type
+const pra=document.querySelector('p');
 
 let data={
 'string':'This is a string',
@@ -32,13 +48,38 @@ let data={
 }
 
 
-document.write(data['boolean']);
-console.log(data['boolean']);
+// document.write(data['boolean']);
+// console.log(data['boolean']);
 
 for( let t in data){
     document.write(`<br>${t}`);
 
 }
+// ##########
+let obj=[{
+    name:'Happy singh',
+    salary:900000,
+    work:'Web Development',
+    
+},
+{
+    name:'mohan singh',
+    salary:800000,
+    work:'App Development',
+    
+}
+]
+  let rt=obj.map((item)=>{
+      const {name,salary,work}=item
+       return `<h2>Name: ${name}<br> Salary: ${salary}<br> Work: ${work} </h2>`
+
+    console.log(item);
+}).join('')
+// document.write(rt)
+    pra.innerHTML=rt
+
+
+
 
     </script>
 </body> 
