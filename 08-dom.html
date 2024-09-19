@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM & BOM</title>
+    <style>
+        .getting{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">DOM & BOM</h1>
+    <p class="txt uo" id="pra">Distance chart</p>
+    
+    
+<span class="sp"></span>
+<span class="sp"></span>
+    <script>
+        let cls=document.getElementById('pra');
+
+        function click(){
+    let target=document.createElement('h3');
+        let ht=target.innerHTML=`This is a heading three`;
+        target.setAttribute('class','getting')
+    cls.appendChild(target);
+    console.log( target);
+}
+click()
+
+
+        // // console.log(cls);
+        // // let u= cls.getAttributeNode('class');
+        // let u= cls.getAttributeNode('class').value
+        // console.log(u);
+        // console.log(u);
+        // let pra= document.getElementsByClassName('txt')
+        // let pra= document.getElementsByTagNameNS('class','text')
+        
+        // console.log(pra);
+        
+
+        // let vl= document.querySelector('.txt');
+//         let vl= document.querySelectorAll('.sp');
+//        let ec=vl.forEach((item)=>{
+// // console.log(item);
+
+//        })
+        // console.log(vl); // now E6 version use this syntax
+
+
+// click()
+                    // ##### BOM ####
+    //   let lo= window.location.href='https://www.youtube.com';
+//    alert()
+//    
+
+    
+
+    </script>
+</body>
+</html>
