@@ -208,10 +208,10 @@ class Programmers extends Employees{
 }
 
 
-let es= new Programmers('harry')
-es.login()
+// let es= new Programmers('harry')
+// es.login()
 // e.requestLeaves(3)
-es.requestLeaves() 
+// es.requestLeaves() 
 //  note that js engine is automatically set constructor(...arg){
 // super(...arg)
 // }
@@ -224,29 +224,68 @@ es.requestLeaves()
 
 
 
+// class Animals {
+//     constructor(Name) {
+//         this.Name = Animals.capitalize(Name);//not use this.capitalize(Name)
+//     }
+
+    // walk() {
+    //     console.log(`Animal ${this.Name} is walking`);
+    // }
+
+//     static capitalize(Name) {
+//         return Name.charAt(0).toUpperCase() + Name.substr(1);// i want that jack first letter be capitalized make block  (i want to make static this block is use in future   )
+//     }
+// }
+
+// let j = new Animals('jack');// also use new Animals(Animals.capitalize(('jack')) 
+// j.walk();
+// j.capitalize(); not use this doses'nt work  
+
+// ######## Get Set and Instance of operator
+//use for management of objects and classes
+
+
+
+
 class Animals {
-    constructor(Name) {
-        this.Name = Animals.capitalize(Name);//not use this.capitalize(Name)
+    constructor(name) {
+        this._name = name;
+        //also use this this._kame = "some value"; d
     }
 
-    walk() {
-        console.log(`Animal ${this.Name} is walking`);
+    fly() {
+        console.log(`is walking`);  
     }
 
-    static capitalize(Name) {
-        return Name.charAt(0).toUpperCase() + Name.substr(1);// i want that jack first letter be capitalized make block  (i want to make static this block is use in future   )
+    get kame() {
+        return this._name;   //use _ this sign underscore use as same
+    }
+    set kame(newName) {
+        this._name=newName;   //use _ this sign underscore use as same
+    }
+}
+class Rabbit extends Animals{
+    eatCarrot(){
+console.log('eating carrot');
+
     }
 }
 
-let j = new Animals('jack');// also use new Animals(Animals.capitalize(('jack')) 
-j.walk();
-// j.capitalize(); not use this doses'nt work  
 
 
 
 
 
-
-
+let ooh = new Rabbit("game");
+// let ooh = new Animals("game");
+ooh.fly(); 
+console.log(ooh.kame); 
+ooh.kame='joni'
+console.log(ooh.kame); 
+// console.log(ooh instanceof Animals);
+console.log(ooh instanceof Rabbit);
+let t=90;
+console.log(t instanceof Animals);// it returns true if obj belongs to the class or any other class inheriting from it
 
 
