@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 style="text-align: center;">Local storage,session storage & cookies</h1>
+   <script>
+    console.log(document.cookie);
+    document.cookie="name=harry12#"
+    document.cookie="name=harry1#"
+    console.log(document.cookie);
+    // ########
+    let key =prompt()
+    let value =prompt()
+    localStorage.setItem(key,value)
+    localStorage.removeItem(key,value)
+    localStorage.clear()
+    localStorage.key() //for index
+
+    console.log(`${key} ${value}`);
+    // #######
+    let key2 =prompt()
+    let value2 =prompt()
+    sessionStorage.setItem(key2,value2)
+    sessionStorage.removeItem(key2,value2)
+    sessionStorage.clear()
+    sessionStorage.key() //for index
+
+    console.log(`${key} ${value}`);
+   </script> 
+</body>
+</html>
