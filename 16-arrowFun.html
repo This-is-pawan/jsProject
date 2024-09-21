@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>arrow function concept</h1>
+    <script>
+    // before 
+      let x1={
+        name:'harry1',
+        role:'js Developer1',
+        exp:30,
+        
+        show:function(){
+            let that =this
+            // console.log(this);  window obj
+            
+            setTimeout(function(){
+                // console.log(this.name);
+                console.log(that.name);
+                
+            }, 2000);
+        }
+       } 
+       x1.show()
+
+
+// $$$$$$$$$ now
+let x={
+        name:'harry',
+        role:'js Developer',
+        exp:30,
+        show:function(){
+            setTimeout(()=>{
+                console.log(this.name);
+                
+            }, 2000);
+        }
+       } 
+       x.show()
+
+    </script>
+</body>
+</html>
