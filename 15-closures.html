@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1 style="text-align: center;">closures </h1>
+
+
+<script>
+    message ='good global';
+    function hello() {
+        let message='good morning';
+        {
+            let message='good Afternoon';
+            console.log('hello 1 :' +message);// message is lexical environment will be return this is closures
+            
+        }
+
+let gift=function hello2(){
+    console.log('an gift');
+    
+}
+
+return gift
+
+    }
+ gift=hello()
+gift()
+
+// 2nd e.g
+function init() {
+    const name='javascript';//let ,var,const
+    function display() {
+        console.log(name);
+        
+    }
+    return display; // it is  closures   
+
+}
+let c=init();
+c()
+// console.log();
+
+
+function retFun() {
+ const x=()=>{
+    let a=1
+    console.log(a);
+const y=()=>{
+    console.log(a);
+}
+const z=()=>{
+    console.log(a);
+}
+a=900
+y()
+ }   
+ return x
+}
+ let p=retFun()
+
+p()
+ 
+</script>
+    
+</body>
+</html>

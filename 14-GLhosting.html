@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1 style="text-align: center;">Global & Hosting</h1>
+    <script>
+    //     let a=9;// global
+
+    //    {
+    //     let a=9;
+    //     console.log(a);
+    //     // local same with function
+    //    }
+    //    console.log(a);
+
+    //    ########## hosting 
+// when you declare a variable below it appears to be declared above you or
+// hosting refers to the process whereby the interpreter appears to move the declarations to the top of the code before execution (in js)
+// var t=9;
+console.log(t);
+name()
+function name(params) {
+    console.log('execution');
+    
+};
+
+// var t;
+// var t=9;
+var let=9; //declaration on the top but not initialization  and it will go temporary dead zone(const ,let)
+// NOTE: fuction expressions and class expressions are not hoisted e.g let fun=()=>{} it is function expression
+
+console.log(t);
+
+    </script>
+</body>
+</html>
