@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;" class="r right">experiment-1</h1>
+    <!-- <h1 style="text-align: center;" class="right ">experiment-2</h1> -->
+
+    <ul class="menu item1">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+    
+    
+    <script>
+
+
+// let m = document.querySelector('.menu').closest('.item1');
+// if (m) {
+//     console.log(m.innerText);
+// } else {
+//     console.log("No parent with class '.item1' found.");
+// }
+
+
+        // #######
+// let d=document.querySelector('.r');
+// let c=document.querySelector('.right');
+// //  console.log(d.matches('.r','style'));
+//  console.log(d.contains(c));
+
+// let childElement = document.querySelector('.right');  
+// if (d.contains(childElement)) {
+//     console.log('The element with class "r" contains the child element');
+// } else {
+//     console.log('The element with class "r" does not contain the child element');
+// }
+
+
+// let myVar = null;
+// console.log(typeof  myVar);// they get obj it is not real obj it is  a bug due to ES6 
+
+
+        // let ele;
+        // console.log( ele);
+        
+        // console.log(null===undefined);
+
+        // console.log(null==undefined);
+        // console.log(undefined==null);
+        // #####$
+        // const you=undefined;
+        // const you=null;
+        // if (undefined) {
+        //     console.log(' a number');
+            
+        // } else {
+        //     console.log('not a number');
+            
+        // }
+
+
+// let $i=0
+// console.log($i);
+// let _i=10
+// console.log(_i);
+// let num1=89;
+// let num2='90';
+
+// console.log(num1==num2);
+// console.log(num2);
+// const boolean1=true;
+// const boolean2=false;
+// console.log(boolean2);
+// console.log(boolean1===boolean2);
+// console.log(boolean1!==boolean2);
+
+// const string1='this is a code';
+// const string2='this is a code';
+// const string2='a code';
+// console.log(string1);
+// console.log(string1==string2);
+// console.log(string1!==string2);
+//  let str='this is of a book of distinct';
+//  let str=[20,40,30,5,6,8];
+//  console.log(str.includes(0));
+ 
+// //  console.log(str.charAt(24));
+//  console.log(str.indexOf(5,3));
+
+//  let obj={
+//     name:'rma',
+//     roll:48
+// }
+// for (const key in obj) {
+//     console.log(key);
+    
+// }
+//  console.log(obj);
+// let a=8;
+// let b=9;
+// name(8,9)
+// function name() {
+    
+//     a++
+//     b--
+//     console.log(a,b);
+// }
+// console.log(b-1);
+// let a=0;
+// let b=2;
+// let target=((a<b)? true:false)
+// console.log(target);
+
+// let arr1=[49,58,95,443];
+// for (let element in arr1) {
+//     console.log(element);// get a index no 
+    
+// }
+// let arr2=[9,8,5,43];
+// for (let element of arr2) {
+//     console.log(element);// get a value
+    
+// }
+// let obj ={
+
+// Animal:'this is a animal',
+// AnimalName:87,
+// food:'grass',
+
+// }
+// let Animal='this is a animal';
+// for (let key in Animal) {
+//     console.log(key);
+    
+// }
+// // for (let element of Object.entries(obj)) {
+//     console.log(element);// get a value
+    
+// } 
+
+
+// let txt= 'tesla car is not butter for indian roads ';
+// let k='lkj' 
+// let s=txt.concat(k);
+// console.log(s);
+// let arr=[9,7,6];
+// let r=[...arr]
+// console.log(r);
+
+// let o= r.map((item)=>{
+// console.log(item);
+// return item
+// }).join('')
+// console.log( o);
+// let arry = ['sham', 'tiger'];
+// console.log(arry); 
+
+// // arry.push('and');
+// arry.pop()
+// console.log(arry); 
+ 
+// let str = 'promise/with/my...after/2years/get/buy/a/new...';
+// let sortedStr = str.split('').sort().join('');
+// console.log(sortedStr);
+// // let ae= Array.from(sortedStr.trim());
+// let ae= Array.isArray(sortedStr.trim());
+// console.log(ae);
+
+
+// ######### callback
+
+
+
+
+
+// let load = (src, callback) => {
+//     console.log(src); 
+//     callback('https://chatgpt.com/c/66f2896c-6f68-8008-b440-9051ef04f682',435879);
+// }
+
+// function yourCallback(data,code) {
+//    console.log(data,code);
+   
+// }
+
+// load('https://chatgpt.com/c/66f2896c-6f68-8008-b440-9051ef04f682', yourCallback); 
+
+
+
+
+
+
+
+// console.log();s
+// let asy= async () => {
+//     let p1 = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//     resolve('resolving 1 the promise')
+    
+// }, 2000);
+
+
+// })
+// let p2 = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//     resolve('resolving 2 the promise')
+    
+// }, 1000);
+// })
+// let wait1= await p1
+// let wait2= await p2
+
+// console.log(`first:${wait1}||second:${wait2}`);
+
+
+// }
+//    asy()
+//    console.log();
+   
+// p1.then((value)=>{
+//     setTimeout(() => {
+//         console.log(`then execution :${typeof value}`);
+        
+//     }, 2000);
+// })
+// let p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log('second execution');
+        
+//     }, 2000);
+// })
+// console.log(p2);
+let p1 = new Promise((resolve, reject) => {
+    resolve(pjl);
+    setTimeout(() => {
+        
+        
+    }, 1000);
+})
+.then((value) => {
+    console.log(value);  
+    
+    setTimeout(() => {
+        console.log('This is executed after 2 more seconds');
+    }, 2000);
+})
+.catch(() => {
+    console.log('there is nt rs');
+});
+
+console.log(p1);  
+
+    </script>
+</body> 
+</html>

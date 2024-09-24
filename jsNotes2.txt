@@ -1,0 +1,297 @@
+variable is like a container all dataType store ,array in it  .
+this a some chages at runtime like e.g let a=0;
+console.log(a)
+a=' hello'
+console.log(a) print hello not 0 this code change at run time 
+1)null bowl is present but empty 
+2)undefined bowl is no present 
+NOTE:1) let letter;// declaration   2)let letter='hello world'//initalized 3) let letter=any {e.g fuction name(){}declaration the fuction and expression is let fun = fuction (){} }// any is a expression 
+      
+### var a=79;  a is identifier ,= is assignment operator ,79 is literal (this all work is declearing variable)
+let b=9;
+###### note some points 
+1)letter, digits, underscores and $ sign allowed.
+2)must begin with a{ $,_ or a letter.}
+3)javascript reserved words cannot be used as a variable name e.g let let =89;
+4) it is case sensitive 
+
+5)var is can be updated & re-declared within its scope 
+6)let can be updated but not re-declared 
+7) const can neither be updated nor be re-declared.
+8) var variable are initalized with undefined whereas let and const variable are not initalized 
+9) const must be initalized during declaration unlike let and var
+#################
+primitive data are seven types it mean what kind of data is put inside any type of variable
+1)number
+2)null
+3)symbol('this is a  code ')//print this is a code
+4)string 
+5)boolean 
+6)e.g BigInt("8")+BigInt("4") //print 12n
+7)undefined e.g let a;
+#########
+non-primitive data types
+a catergory of data types that are used to create complex structure and organize large sets of dataType
+e.g 1)class 
+2)Arrays
+3)objects
+etc
+### operators 
+1)arthmehtic operator
+2)logical operator
+3)comparison operator
+
+4) condition ? expression true : expression flase; // ternary operator
+
+
+######## loops use with array and objects
+// loops 1)while
+// loops 1)do while
+// loops 1)for loop
+// loops 1)for of [string & array]
+// loops 1)for in  [obj,arry]
+// examples
+
+
+for(i=0; i<5; i++){
+
+i ki value condition ka baaad print  hoo kar ++ hoti hai 
+}
+
+######### fuctions 
+
+##### note trim use with string
+
+
+###### Arrays
+string are not muteable and not chages
+array.toString();
+.toString()
+.charAt(2)
+array.join('');
+Array.isArray(object) get boolean value
+push();same array change
+pull(); same array change
+pop() same array change
+shift() firstly pop
+unshift() vice versa
+sort() use in 
+let num=[2,3,5,4,8]
+splice(2,3,58.67,8945)
+1)2 is position to add
+2)3 is no. of elements to remove 
+3)58.67 &8945 is elements to be added in array
+print []
+let num=[2,3,5,4]
+delete num[2]
+Array.from() used to create an array from any other obj
+map(any,index,array) new array forEach(it is a loop[any,index,array])use for operations an existing array
+reduce()++
+filter() for condition
+
+#####  BOM(browser obj model)
+the browser obj model (host enviornment) for working with everything except the document 
+the fuctions aler/confirm/prompt  are also a part of the BOM 
+location.href ='https.//any.com' 
+
+##### DOM 
+.matches()to check if element matches the given css selector boolean
+.contain() to look for the nearest ancestor that matches
+the given css selector. The
+element itself is also checked  boolean
+.closest() returns true if ele is inside  boolean
+replaceWith()
+
+###########callback
+why or why not ?
+fuction load(src,callback){
+var script =document.createElement('script')
+script.src=src
+script.onload=fuction(){
+console.log(src)
+callback(src)
+}
+document.body.appendChild(script)
+
+ }
+ function hello(src){
+ console.log(any)
+ }
+ load("any",hello)
+
+sendEmergenceMessageToCeo()
+use in callback too problems create hoo jati hai
+also pyramid of doom (structure)
+ess problems kaa solution is promise
+##### synchronous 
+
+step to step
+aak kaa baad aak
+###### Asynchronous
+setTimeOut is best e.g
+######### promises
+this is  use for ||ar execution
+1}stat:  initially pending , then chages to either fulfilled when resolve is called or rejected when reject is called
+2}results: initially undefined , then changes to value if resolved(value) or error when rejected (error) 
+types following
+1)all[]
+2) allSettled[]
+3)race[] tino main joo phala hoo jayi chai reject or resolve
+4)any[] not reject tino main joo phala hoo jayi ( any problems than throw aggregate error)
+5)resolve[]
+6)reject[]
+### let prAll=promise all[p1+p2+p3]
+All mai aak bii promise reject hua to all promise reject hoo jya gaa  too use kartai hai allSettled[]
+
+.then(()=>{
+    log
+})
+### await is use async () function 
+make any fuction 
+use promise 
+basically use for waiting 
+
+
+###### try catch 
+try{
+
+}
+catch(){
+
+}
+// #### Error objects $ custom Error
+try{
+    
+    console.log(name)
+    }catch(error){
+   console.log(error.name)
+        console.log(error.message)
+        console.log(error.stack)
+        console.log(location)
+    }
+finally{
+   
+    
+}
+finally use when try and catch both have error
+
+
+########## API
+
+let joke= fetch('https://goweather.herokuapp.com/weather/Ny')
+ joke.then((val1)=>{
+    return val1.json()
+ }).then((val2)=>{
+    return val2;
+     }).then((val3)=>{
+console.log(val3);
+
+    
+     })
+
+##### cookies
+ console.log(document.cookie);
+    document.cookie="name=harry12#"
+    document.cookie="name=harry1#"
+    console.log(document.cookie);
+    ##### local storage 
+
+let key =prompt()
+    let value =prompt()
+    localStorage.setItem(key,value)
+     localStorage.removeItem(key,value)
+     localStorage.clear()
+     localStorage.key() for index
+
+    console.log(`${key} ${value}`);
+  ##### session storage    when new tab use in browser session storage is remove
+let key =prompt()
+    let value =prompt()
+    sessionStorage.setItem(key,value)
+     sessionStorage.removeItem(key,value)
+     sessionStorage.clear()
+     sessionStorage.key() for index
+
+#### oops  search on google
+
+it four pullers
+1)Abstraction (internal code is hide)
+2)Encapsulation(speaker , keys , screen ,etc to combine make a laptop)
+3)inheritance(lod keypad mobile is convert into smart phone )
+4)polymorphism(your ipad can also be a phone if you are using it. )
+prototypes 
+  ##prototypes it is part of oop
+
+when we try to read a property from a prototype and its missing .js automatically takes it from the prototype . this is called 'prototype inheritance'
+let a ={
+    name:'happy'
+}
+log  under some property use in it
+
+not use this
+let a ={
+    name:'happy'
+} 
+let p={
+    run:()=>{
+        alert('run')
+    }
+}
+console.log(a) // not run get error
+a.__prototype__= p // its run
+
+###### (oops) classes & objects
+e.g 
+class is a template(blank form) and obj is data fill by you esa koyi or nehi use kar sakta because of filling with pen
+
+NOTE:if you leave the form blank , the constructor keeps calling you as many times as the block off code is in it.
+
+######### IIFE => you can without using function run the  async await syntax 
+(
+ function(){
+
+ })()
+
+######## closures (lexical environment)
+
+######
+express.js
+ make backend server
+joo client nehi dek sakta
+backend (node i -g nodemon auto reload the server )
+###### regular expression
+const regex= /very/g ;
+const text= 'harry is very nice   and very awesome very good '
+console.log(text.replace('very','VERY'))
+console.log(text.replace(regex,'VERY'))
+
+#####event loops (loupe)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
