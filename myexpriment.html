@@ -321,21 +321,21 @@ let p3 = new Promise((resolve, reject) => {
   }, 3000);
 })
 p1.then((value) => {
-  console.log(value);
+  // console.log(value);
   
 })
 p2.then((value) => {
-  console.log(value);
+  // console.log(value);
   
 })
 p3.then((value) => {
-  console.log(value);
+  // console.log(value);
   
 })
 let aw=Promise.all([p1,p2,p3]);
 aw.then((value)=>{
 
-  console.log(value);
+  // console.log(value);
 })
 
 // console.log(p1,p2);
@@ -344,7 +344,30 @@ aw.then((value)=>{
 
 
 
+let asy= async () => {
+  let p1  = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      
+      resolve('30 deg')
+    }, 1000);
+  })
+  let p2  = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      
+      resolve('20 deg')
+    }, 2000);
 
+  })
+   let a=await p1
+   let b=await p2
+  //  console.log(`promise1:${a} promise2:${b}`);
+     return  `promise1:${a} promise2:${b}`
+}
+let e=asy()
+e.then((val)=>{
+  console.log(val);
+})
+// console.log(e);
 
 
 
