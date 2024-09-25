@@ -15,7 +15,7 @@
         <li class="item">Item 3</li>
     </ul>
     
-    
+    <button class="btn">click</button>
     <script>
 
 
@@ -365,15 +365,37 @@ let asy= async () => {
 }
 let e=asy()
 e.then((val)=>{
-  console.log(val);
+  // console.log(val);
 })
 //  console.log(e);
 
 
 
+// const apiKey = 'your_api_key_here';
 
+let as = async () => {
+  const url = 'https://icanhazdadjoke.com/';
 
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+    const data = await response.json(); 
+    console.log(data); 
 
+    // Now let's display the joke in the document
+    document.body.innerHTML += `<br><h2>${data.joke} status code:${data.status}</h2>`;
+     
+    
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
+as(); 
+// console.log(a); 
 
     </script>
 </body> 
