@@ -142,15 +142,15 @@ let getting = async () => {
 // getting();
 
 // ##################
-//    let joke= fetch('https://goweather.herokuapp.com/weather/Ny',option)
-//  joke.then((val1)=>{
-//     return val1.json()
-//  }).then((val2)=>{
-//     return val2;
-//      }).then((val3)=>{
-// console.log(val3);
+   let joke= fetch('https://goweather.herokuapp.com/weather/Ny',option)
+ joke.then((val1)=>{
+    return val1.json()
+ }).then((val2)=>{
+    return val2;
+     }).then((val3)=>{
+console.log(val3);
 
-//      })
+     })
 
 
 

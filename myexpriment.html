@@ -235,25 +235,122 @@
 //     }, 2000);
 // })
 // console.log(p2);
-let p1 = new Promise((resolve, reject) => {
-    resolve(pjl);
-    setTimeout(() => {
-        
-        
-    }, 1000);
-})
-.then((value) => {
-    console.log(value);  
-    
-    setTimeout(() => {
-        console.log('This is executed after 2 more seconds');
-    }, 2000);
-})
-.catch(() => {
-    console.log('there is nt rs');
-});
 
-console.log(p1);  
+
+
+// let p1 = new Promise((resolve, reject) => {
+//     resolve(pjl);
+//     setTimeout(() => {
+        
+        
+//     }, 1000);
+// })
+// .then((value) => {
+//     console.log(value);  
+    
+//     setTimeout(() => {
+//         console.log('This is executed after 2 more seconds');
+//     }, 2000);
+// })
+// .catch(() => {
+//     console.log('there is nt rs');
+// });
+
+// console.log(p1);  
+//  try {
+//     setTimeout(() => {
+//         console.log('there is a code ');
+        
+//     }, 1000);
+//  } catch (error) {
+    
+//  }
+
+// let joke1= fetch('https://goweather.herokuapp.com/weather/Ny',option)
+//  joke.then((val1)=>{
+//     return val1.json()
+//  }).then((val2)=>{
+//     return val2;
+//      }).then((val3)=>{
+// console.log(val3);
+
+//      })
+//  let sy=async() => {
+    
+
+// let option = {
+//     method: "GET", 
+//     headers: {
+//         "Content-Type": "application/json" 
+//     }
+// };
+
+// let joke =await fetch('https://goweather.herokuapp.com/weather/New%20York', option) // Corrected URL
+//     .then((val1) => {
+//         return val1.json();
+//     })
+//     .then((val2) => {
+//         console.log(val2);
+//     })
+//     .catch((error) => {
+//         console.error('Error:', error);
+//     });
+// }
+// sy()
+
+let p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('first')
+    // console.log('there is p1');
+    
+  }, 1000);
+})
+
+let p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('second')
+    // console.log('there is p2');
+    
+  }, 2000);
+})
+let p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('three')
+    // console.log('there is p2');
+    
+  }, 3000);
+})
+p1.then((value) => {
+  console.log(value);
+  
+})
+p2.then((value) => {
+  console.log(value);
+  
+})
+p3.then((value) => {
+  console.log(value);
+  
+})
+let aw=Promise.all([p1,p2,p3]);
+aw.then((value)=>{
+
+  console.log(value);
+})
+
+// console.log(p1,p2);
+
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
 </body> 
