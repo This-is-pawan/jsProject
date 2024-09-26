@@ -36,6 +36,13 @@ a {
 li {
   list-style-type: none;
 }
+.fa-moon{
+    padding: 5px;
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: blue;
+    cursor: pointer;
+}
 .nav-align {
   /* display: none; */
   width: 100%;
@@ -147,6 +154,7 @@ cursor: pointer;
   .barList{
     display: none;
   }
+  
 }
 
 .OrderList a {
@@ -156,10 +164,13 @@ cursor: pointer;
 }
 
 .dataTypes li {
-  padding: 1rem;
-}
+  padding: 0.7rem;
+  text-align: justify;
+} 
+
 .dataTypes-2 li{
-    padding: 1rem;
+    padding: 0.7rem;
+    text-align: justify;
 } 
 .dataTypes-2 ul{
     position: absolute;
@@ -167,8 +178,8 @@ cursor: pointer;
     height: 0;
     overflow: hidden;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    padding: 20px;
-    top: 3.7rem;
+    /* padding: 20px; */
+    top: 4.5rem;
     right: 7rem; 
     color: rgb(100, 76, 53);
 }
@@ -178,8 +189,8 @@ cursor: pointer;
   height: 0;
   overflow: hidden;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  padding: 20px;
-  top: 3.7rem;
+  /* padding: 20px; */
+  top: 4.5rem;
   left: 7rem; 
   color: rgb(100, 76, 53);
   /* background: rgb(83, 62, 41); */
