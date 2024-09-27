@@ -47,8 +47,7 @@ moon.forEach((e) => {
       popupShow.style.background = newColor;
     }, 200);
     setTimeout(() => {
-      clearTimeout(out);
-      popupShow.classList.remove("popupShow");
+  popupShow.classList.remove("popupShow");
     }, 2000);
 
     document.body.style.background = newColor;
