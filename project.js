@@ -4,6 +4,7 @@ let dataTypes=document.querySelector('.dataTypes');
 let dataTypes2=document.querySelector('.dataTypes-2');
 let moon=document.querySelectorAll('.fa-moon');
 let popupShow=document.querySelector('.popup');
+let span=document.querySelector('.popup span');
 let dataTypesShow=document.querySelector('.dataTypesShow ul');
 
 
@@ -26,7 +27,11 @@ moon.forEach((e) => {
     e.addEventListener('click', () => {
         let newColor = randomColor(); 
         // console.log(newColor);
-        popupShow.classList.toggle('popupShow');
+        setTimeout(() => {
+            
+            popupShow.classList.toggle('popupShow');
+            popupShow.style.background=newColor;
+        }, 200);
 
         document.body.style.background = newColor; 
         e.style.color=newColor;
