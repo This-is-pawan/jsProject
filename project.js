@@ -3,6 +3,7 @@ let barList=document.querySelector('.barList');
 let dataTypes=document.querySelector('.dataTypes');
 let dataTypes2=document.querySelector('.dataTypes-2');
 let moon=document.querySelectorAll('.fa-moon');
+let popupShow=document.querySelector('.popup');
 let dataTypesShow=document.querySelector('.dataTypesShow ul');
 
 
@@ -25,6 +26,7 @@ moon.forEach((e) => {
     e.addEventListener('click', () => {
         let newColor = randomColor(); 
         // console.log(newColor);
+        popupShow.classList.toggle('popupShow');
 
         document.body.style.background = newColor; 
         e.style.color=newColor;
@@ -48,6 +50,7 @@ caretUp.forEach((e)=>{
     
     // randomColor();
     value.target.classList.toggle('upRotate')
+    
     if (value.currentTarget.classList.contains('one')) {
         // console.log('ok');
         dataTypes.classList.toggle('dataTypesShow');   
@@ -62,3 +65,16 @@ caretUp.forEach((e)=>{
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
