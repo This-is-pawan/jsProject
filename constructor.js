@@ -169,16 +169,16 @@ let a = () => {
 // pass of value it is use in primitive data  and pass  reference it is use in no-primitive data 
 
 let passOFValue1='The world';
-let passOFValue2 =passOFValue1;
+let passOFValue2 =passOFValue1;// it store different memory 
 passOFValue2='There is change'
-console.log(passOFValue2);
+console.log(passOFValue2); 
 
 
 let passOFReference1={
   Name:'happy',
   class:'34',
 };
-let passOFReference2 =passOFReference1;
+let passOFReference2 =passOFReference1; // it store same memory 
 passOFReference2.Name='harry';
 console.log(passOFReference2);
 
