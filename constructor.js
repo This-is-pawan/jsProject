@@ -184,4 +184,53 @@ console.log(passOFReference2);
 
 
 
+// for (let index = 1; index <=5; index++) {
+//   setTimeout(() => {
+    
+//     const element = index;
+//     console.log(element);
+//   },index*200);
+  
+// }
+// for (var i = 1; i <=5; i++) {
+//   function name(x) {
+    
 
+//   setTimeout(function(){ 
+//     console.log(x);
+//   },x*300);
+// }
+//   name(i)
+// }
+
+
+// for( var f=1; f<=5; f++ ){
+// console.log(f);
+
+// }
+// console.log(f); 
+// console.log(f); 
+// In the var loop, the variable i is available even outside the loop. If you log i after the loop, it will be 6 (because that's when the loop ends).
+// for( let i=1; i<=5; i++ ){
+//   console.log(i);
+  
+//   }
+  // console.log(i); In the let loop, the variable i is scoped to the block of the loop, and it's not accessible outside of it.
+//   function recursiveFunction(counter) {
+//     console.log('Counter:', counter);
+//     if (counter < 5) {
+//         recursiveFunction(counter + 1); // Function calls itself
+//     }
+// }
+
+// recursiveFunction(1); // Start the recursive calls
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// IMPORTANT POINTS REGARDING FUNCTIONS 
+// 1)Inner function called inside outer function: Outer starts, inner runs, outer finishes.
+//2) Inner function defined but not called: Outer executes fully, inner remains idle.
+//3) Inner function returned and executed later: Outer completes, inner is called later.
+//4) Inner function immediately invoked (IIFE): Both outer and inner execute immediately.
+//5) Asynchronous inner function: Outer finishes first, inner runs later (asynchronously).
+//6)Recursion: Function calls itself in a loop until a condition is met.
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
