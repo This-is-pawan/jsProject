@@ -141,12 +141,47 @@ let a = () => {
 //   console.log(c);
 // })();
 // var b1='oop'
-  (async () => {
-    var b = await a();
-    console.log(b);
+  // (async () => {
+  //   var b = await a();
+  //   console.log(b);
   
-    let c = await a();
-    console.log(c);
-    // console.log(b1);
-  })();
+  //   let c = await a();
+  //   console.log(c);
+  //   // console.log(b1);
+  // })();
   // console.log(b1);
+  // f() class and function expression is not use in it
+  
+  // let f=function name(params) {
+  //   console.log('there is hosting or not');
+    
+  // }
+  // f()
+  let c=9; // variable shadowing 
+  function name() {
+    var c=0;
+    console.log(c);
+    
+  }
+  name()
+  // console.log(window.c);
+  console.log(c);
+// pass of value it is use in primitive data  and pass  reference it is use in no-primitive data 
+
+let passOFValue1='The world';
+let passOFValue2 =passOFValue1;
+passOFValue2='There is change'
+console.log(passOFValue2);
+
+
+let passOFReference1={
+  Name:'happy',
+  class:'34',
+};
+let passOFReference2 =passOFReference1;
+passOFReference2.Name='harry';
+console.log(passOFReference2);
+
+
+
+
