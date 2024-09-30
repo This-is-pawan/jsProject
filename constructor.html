@@ -38,6 +38,21 @@
     </style>
   </head>
   <body>
+    <input type="range" id="mySlider" min="0" max="100" value="50" oninput="updateValue(this.value)" />
+<p>Selected Value: <span id="sliderValue">50</span></p>
+
+<script>
+  
+  
+  function updateValue(val) {
+console.log(val);
+
+    document.getElementById('sliderValue').innerText = val;
+  };
+ 
+ 
+</script>
+
     <h1 style="text-align: center">constructor</h1>
 
     <!-- <div class="animal">
