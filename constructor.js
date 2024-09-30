@@ -77,61 +77,61 @@ let btn = document.querySelector(".btn");
 let span = document.querySelector("span");
 let text = document.querySelector("h1");
 
-let arr = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-];
-let joining = "#";
+// let arr = [
+//   "A",
+//   "B",
+//   "C",
+//   "D",
+//   "E",
+//   "F",
+//   "0",
+//   "1",
+//   "2",
+//   "3",
+//   "4",
+//   "5",
+//   "6",
+//   "7",
+//   "8",
+//   "9",
+// ];
+// let joining = "#";
 
-let randomColor = () => {
-  joining = "#";
-  for (let i = 0; i < 6; i++) {
-    let random = Math.floor(Math.random() * arr.length);
-    joining += arr[random];
-  }
-  return joining;
-};
+// let randomColor = () => {
+//   joining = "#";
+//   for (let i = 0; i < 6; i++) {
+//     let random = Math.floor(Math.random() * arr.length);
+//     joining += arr[random];
+//   }
+//   return joining;
+// };
 
-class BackgroundCL {
-  constructor(Fun) {
-    this.Fun = Fun;
-  }
-}
+// class BackgroundCL {
+//   constructor(Fun) {
+//     this.Fun = Fun;
+//   }
+// }
 
-class BackgroundOutPut extends BackgroundCL {
-  constructor(Fun) {
-    super(Fun);
-    btn.addEventListener("click", () => {
-      span.innerText = `background shades: ${randomColor()}`;
-      text.style.color = `${randomColor()}`;
-      document.body.style.background = `${randomColor()}`;
-    });
-  }
-}
+// class BackgroundOutPut extends BackgroundCL {
+//   constructor(Fun) {
+//     super(Fun);
+//     btn.addEventListener("click", () => {
+//       span.innerText = `background shades: ${randomColor()}`;
+//       text.style.color = `${randomColor()}`;
+//       document.body.style.background = `${randomColor()}`;
+//     });
+//   }
+// }
 
-let bColor = new BackgroundOutPut();
+// let bColor = new BackgroundOutPut();
 
-let a = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("hey I'm resolve");
-    }, 2000);
-  });
-};
+// let a = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("hey I'm resolve");
+//     }, 2000);
+//   });
+// };
 
 // (async () => {
 //   let b = await a();
@@ -243,6 +243,25 @@ let a = () => {
 // }
 // // name();
 
+const jsInput = document.getElementById('jsInput');
+const runButton = document.getElementById('runButton');
+const output = document.getElementById('output');
+
+runButton.addEventListener('click', () => {
+    const code = jsInput.value;
+    output.innerHTML = ''; 
+
+    try {
+        
+        const result = eval(code);
+
+       
+        output.textContent = result !== undefined ? result : 'Code executed successfully.';
+    } catch (error) {
+      
+        output.textContent = `Error: ${error.message}`;
+    }
+});
 
 
 
