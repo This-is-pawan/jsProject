@@ -291,18 +291,29 @@
 // // };
 // // let print=cal(radius, area);
 // // console.log( print);
-let obj=[{name:'ram',age:8,sal:80000,},{name2:'ram',age:8,sal:80000,}]
-// let arr= [4,5,6,7,3];
-// let arr=['first','second','third','fourth','fifth',]
-let sum =obj.reduce((acc,curr)=>{
-return  curr[acc];
-// return ;
-},)
+// let obj=[{name:'ram',age:8,sal:80000,},{name2:'ram',age:8,sal:80000,}]
+// // let arr= [4,5,6,7,3];
+// // let arr=['first','second','third','fourth','fifth',]
+// let sum =obj.reduce((acc,curr)=>{
+// return  curr[acc];
+// // return ;
+// },)
 
-console.log(sum);
+// console.log(sum);
 
-
-
+// let p= new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('This my promise')
+//     }, 2000);
+// })
+// let a= async () => {
+//     let aw = await p;
+//     console.log('There is print');
+//     console.log(aw);
+    
+// }
+// console.log('outer is print');
+// a()
 
 
 
