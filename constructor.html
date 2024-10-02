@@ -173,6 +173,8 @@
         <div class="img-align">
             <img src="https://images.pexels.com/photos/2531546/pexels-photo-2531546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 class="hideImg" alt="">
+            <img src="https://images.pexels.com/photos/2531546/pexels-photo-2531546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                class="hideImg" alt="">
             <img src="https://cdn.pixabay.com/animation/2022/07/29/03/42/03-42-05-37_512.gif" class="gif" alt="">
         </div>
 
@@ -183,20 +185,51 @@
         let img = document.querySelector('img');
         let btn = document.querySelector('.btns');
         let gif = document.querySelector('.gif');
-        btn.addEventListener('click', () => {
+        // let click=() => {
 
-            let p = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    img.classList.add('showImg');
-                    gif.classList.remove('gifShow')
-                }, 4000);
+        // let p = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         img.classList.add('showImg');
+        //         gif.classList.remove('gifShow')
+        //         btn.removeEventListener('click',click);
+        //     }, 3000);
 
-                resolve(gif.classList.add('gifShow'));
+        //     resolve(gif.classList.add('gifShow'));
 
 
-            });
-            img.innerHTML = p;
-        });
+        // });
+        // img.innerHTML = p;
+        // }
+
+
+
+        // result()
+        let result = async () => {
+
+            function name(params) {
+                let p = new Promise((resolve, reject) => {
+
+                    gif.classList.add('gifShow');
+
+                    setTimeout(() => {
+                        img.classList.add('showImg');
+                        gif.classList.remove('gifShow');
+                        btn.removeEventListener('click', name);
+                        resolve();
+                    }, 3000);
+                });
+
+
+                return p;
+            }
+
+           
+            btn.addEventListener('click', name);
+        }
+
+      
+        let r = result();
+        console.log(r);
 
 
     </script>
