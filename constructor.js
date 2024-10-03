@@ -276,8 +276,7 @@
 
 // // let area = function (pr) {
 // //   return Math.PI * pr * pr;
-  
-  
+
 // // };
 // // let cal = function (r, logic) {
 // //   const output = [];
@@ -310,91 +309,85 @@
 //     let aw = await p;
 //     console.log('There is print');
 //     console.log(aw);
-    
+
 // }
 // console.log('outer is print');
 // a()
 
+//  let promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+// try {
+//     console.log(o);
+
+// } catch (error) {
+//     console.log(error);
+
+// }
+
+//         resolve('This promise is resolve in one second')
+//     }, 3000);
+// });
+
+// let promise2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('This promise is resolve in two second')
+//     }, 1000);
+// });
+
+// let promise3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('This promise is resolve in three second')
+//     }, 4000);
+// });
+
+// let promise4 = new Promise((resolve, reject) => {
+
+//     setTimeout(() => {
+
+//         resolve('This promise is resolve in four second')
+//     }, 400);
+// });
+
+// ############ call , apply , bind ########
+
+// normal use without this keyword
+// let obj1 = {
+//   Name: "john smith",
+//   age: 34,
+//   txt: function (you,applys) {
+//     console.log(`1) your name: ${obj1.Name} 2) txt: ${you} 3) applyTxt:  ${applys}`);
+//   },
+// };
+
+// let obj2 = {
+//   Name: "Era smith",
+//   age: 30,
+//   txt: "this is text",
+// };
+// obj1.txt.call(obj2, "your name or not");
+// obj1.txt.apply(obj2, ["this is text",'this is apply']);
+//  let store= obj1.txt.bind(obj2, "this is text",'this is apply');
+// store()
 
 
- let promise1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        // try {
-        //     console.log(o);
-            
-        // } catch (error) {
-        //     console.log(error);
-            
-        // }
-        
-        resolve('This promise is resolve in one second')
-    }, 3000);
-});
-
-let promise2 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve('This promise is resolve in two second')
-    }, 1000);
-});
-
-let promise3 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve('This promise is resolve in three second')
-    }, 4000);
-});
-
-let promise4 = new Promise((resolve, reject) => {
-    
-    setTimeout(() => {
-        
-        resolve('This promise is resolve in four second')
-    }, 400);
-});
-
-let promiseResolve = Promise.any([promise1,promise2,promise3,promise4]);
-promiseResolve.then((val)=>{
-console.log(val);
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ####### use with this keyword
+let obj1 = {
+    Name: "john smith",
+    age: 34,
+    txt:function(you,applys) {
+      console.log(`1) your name: ${this.age} 2) txt: ${you} 3) applyTxt:  ${applys}`);
+    //    console.log(`1) your name: ${this.Name} 2) txt: ${this.you} 3) applyTxt:  ${this.applys}`); not use This syntax and arrow function not use this keyword it refers to the outer context obj1
+    },
+  };
+  
+  let obj2 = {
+    Name: "Era smith",
+    age: 30,
+    // txt: "this is text",
+  };
+  // obj1.txt.call(obj2, "your name or not");
+  // obj1.txt.apply(obj2, ["this is text",'this is apply']);
+   let store= obj1.txt.bind(obj2, "this is text",'this is apply');
+  store()
+  
+   
