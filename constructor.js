@@ -317,6 +317,80 @@
 
 
 
+ let promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        // try {
+        //     console.log(o);
+            
+        // } catch (error) {
+        //     console.log(error);
+            
+        // }
+        
+        resolve('This promise is resolve in one second')
+    }, 3000);
+});
+
+let promise2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('This promise is resolve in two second')
+    }, 1000);
+});
+
+let promise3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('This promise is resolve in three second')
+    }, 4000);
+});
+
+let promise4 = new Promise((resolve, reject) => {
+    
+    setTimeout(() => {
+        
+        resolve('This promise is resolve in four second')
+    }, 400);
+});
+
+let promiseResolve = Promise.any([promise1,promise2,promise3,promise4]);
+promiseResolve.then((val)=>{
+console.log(val);
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
